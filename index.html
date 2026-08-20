@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scuola di Unità 2026 — Belvedere Fogliense</title>
+<meta name="description" content="17 giorni, una casa, la tua scuola di sempre. Scuola di Unità 2026: 11–27 settembre, canonica di Belvedere Fogliense. 21ª edizione.">
+<meta property="og:title" content="Scuola di Unità 2026">
+<meta property="og:description" content="17 giorni. Una casa. Un modo diverso di stare al mondo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B0A0F;
+    --ink-2:#141220;
+    --paper:#F7F4EE;
+    --muted:#9A93A8;
+    --hot:#FF4D2E;
+    --violet:#8B5CFF;
+    --lime:#C8FF3D;
+    --sky:#3DDCFF;
+    --edge:rgba(255,255,255,.10);
+    --r:22px;
+    --display:'Bricolage Grotesque','Arial Black',system-ui,sans-serif;
+    --text:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--ink);color:var(--paper);font-family:var(--text);
+    font-size:17px;line-height:1.6;overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.28;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+    mix-blend-mode:overlay;
+  }
+  ::selection{background:var(--lime);color:var(--ink)}
+  a{color:inherit}
+  .wrap{width:min(1180px,92vw);margin-inline:auto}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:900;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px min(4vw,34px);
+    background:rgba(11,10,15,0);backdrop-filter:blur(0px);
+    transition:background .35s ease, backdrop-filter .35s ease, border-color .35s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.stuck{background:rgba(11,10,15,.82);backdrop-filter:blur(16px);border-bottom-color:var(--edge)}
+  .brand{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:1.05rem;display:flex;align-items:center;gap:9px}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--hot);box-shadow:0 0 18px var(--hot);flex:none}
+  .navlinks{display:flex;gap:26px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:.86rem;font-weight:500;color:var(--muted);transition:color .2s}
+  .navlinks a:hover{color:var(--paper)}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+    font-family:var(--display);font-weight:800;letter-spacing:-.01em;
+    padding:13px 24px;border-radius:100px;font-size:.95rem;
+    background:var(--paper);color:var(--ink);border:none;cursor:pointer;
+    transition:transform .18s cubic-bezier(.2,.8,.3,1), box-shadow .25s;
+  }
+  .btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 40px rgba(255,77,46,.35)}
+  .btn-hot{background:linear-gradient(100deg,var(--hot),#FF8A3D);color:#fff}
+  .btn-ghost{background:transparent;color:var(--paper);border:1.5px solid var(--edge)}
+  .btn-ghost:hover{border-color:var(--paper);box-shadow:none}
+  @media(max-width:760px){.navlinks{display:none}}
+
+  /* ---------- HERO ---------- */
+  header{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:120px 0 60px;overflow:hidden}
+  .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;pointer-events:none;animation:float 18s ease-in-out infinite}
+  .b1{width:52vw;height:52vw;background:var(--hot);top:-14%;right:-12%}
+  .b2{width:42vw;height:42vw;background:var(--violet);bottom:-16%;left:-10%;animation-delay:-6s}
+  .b3{width:26vw;height:26vw;background:var(--sky);top:38%;left:32%;opacity:.22;animation-delay:-11s}
+  @keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(4vw,-3vw) scale(1.08)}66%{transform:translate(-3vw,3vw) scale(.94)}}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid var(--edge);border-radius:100px;padding:8px 18px;
+    font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);
+    background:rgba(255,255,255,.05);backdrop-filter:blur(10px);margin-bottom:26px;
+  }
+  .pulse{width:7px;height:7px;border-radius:50%;background:var(--lime);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(200,255,61,.6)}50%{opacity:.7;box-shadow:0 0 0 8px rgba(200,255,61,0)}}
+
+  h1{
+    font-family:var(--display);font-weight:800;letter-spacing:-.045em;line-height:.92;
+    font-size:clamp(3.4rem,13vw,10.5rem);text-transform:uppercase;
+  }
+  h1 .line{display:block;padding-top:.14em;margin-bottom:-.1em}
+  h1 .line span{display:block;animation:rise .95s cubic-bezier(.2,.8,.2,1) both}
+  h1 .line:nth-child(2) span{animation-delay:.09s}
+  h1 .line:nth-child(3) span{animation-delay:.18s}
+  @keyframes rise{from{transform:translateY(38%);opacity:0}to{transform:translateY(0);opacity:1}}
+  .grad{
+    background:linear-gradient(94deg,var(--hot),var(--violet) 45%,var(--sky));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    background-size:220% 100%;animation:slide 7s ease-in-out infinite;
+  }
+  @keyframes slide{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+  .hero-sub{max-width:36ch;font-size:clamp(1.05rem,2.4vw,1.4rem);color:#D6D1E0;margin:30px 0 34px}
+  .hero-sub b{color:var(--paper);font-weight:600}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:52px;
+    padding-top:26px;border-top:1px solid var(--edge);
+  }
+  .hero-meta div{display:flex;flex-direction:column;gap:2px}
+  .hero-meta .k{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .hero-meta .v{font-family:var(--display);font-weight:600;font-size:1.05rem}
+
+  /* ---------- COUNTDOWN ---------- */
+  .count{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+  .count .cell{
+    background:rgba(255,255,255,.05);border:1px solid var(--edge);border-radius:16px;
+    padding:12px 16px;min-width:82px;text-align:center;backdrop-filter:blur(8px);
+  }
+  .count .n{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1;letter-spacing:-.03em}
+  .count .l{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    border-block:1px solid var(--edge);background:var(--ink-2);
+    padding:15px 0;overflow:hidden;white-space:nowrap;
+  }
+  .marquee .track{display:inline-flex;gap:40px;animation:scroll 26s linear infinite;will-change:transform}
+  .marquee span{font-family:var(--display);font-weight:800;font-size:1.15rem;text-transform:uppercase;letter-spacing:-.02em;color:var(--muted)}
+  .marquee span.on{color:var(--lime)}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:clamp(72px,11vw,140px) 0;position:relative}
+  .tag{
+    font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--hot);
+    font-weight:600;margin-bottom:18px;display:block;
+  }
+  h2{
+    font-family:var(--display);font-weight:800;letter-spacing:-.04em;line-height:1.02;
+    font-size:clamp(2.3rem,6.4vw,4.6rem);text-transform:uppercase;margin-bottom:24px;
+  }
+  h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;font-size:1.35rem;margin-bottom:9px}
+  .lead{font-size:clamp(1.05rem,2.1vw,1.3rem);color:#D6D1E0;max-width:62ch}
+  .lead + .lead{margin-top:16px}
+  p a{color:var(--lime)}
+
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- STATS ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:56px}
+  .stat{
+    border:1px solid var(--edge);border-radius:var(--r);padding:28px 24px;
+    background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+    transition:transform .3s cubic-bezier(.2,.8,.3,1),border-color .3s;
+  }
+  .stat:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.28)}
+  .stat .big{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6vw,3.6rem);line-height:1;letter-spacing:-.04em}
+  .stat .cap{color:var(--muted);font-size:.9rem;margin-top:10px}
+  .c1 .big{color:var(--hot)} .c2 .big{color:var(--lime)} .c3 .big{color:var(--sky)} .c4 .big{color:var(--violet)}
+
+  /* ---------- SPLIT ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+  @media(max-width:900px){.split{grid-template-columns:1fr}}
+  .cards{display:grid;gap:14px}
+  .card{
+    border:1px solid var(--edge);border-radius:var(--r);padding:26px;
+    background:rgba(255,255,255,.035);position:relative;overflow:hidden;
+    transition:transform .3s cubic-bezier(.2,.8,.3,1),background .3s;
+  }
+  .card:hover{transform:translateX(7px);background:rgba(255,255,255,.06)}
+  .card .num{
+    font-family:var(--display);font-weight:800;font-size:.8rem;color:var(--ink);
+    background:var(--lime);border-radius:100px;padding:3px 11px;display:inline-block;margin-bottom:13px;
+  }
+  .card p{color:#C9C4D4;font-size:.98rem}
+
+  /* ---------- QUOTE ---------- */
+  .quote{
+    border-radius:var(--r);border:1px solid var(--edge);margin-top:52px;
+    padding:clamp(34px,5vw,58px);
+    background:linear-gradient(150deg,rgba(139,92,255,.18),rgba(61,220,255,.07));
+  }
+  .quote blockquote{
+    font-family:var(--display);font-weight:800;letter-spacing:-.035em;line-height:1.02;
+    font-size:clamp(1.9rem,5.2vw,3.4rem);text-transform:uppercase;
+  }
+  .quote cite{display:block;margin-top:18px;font-style:normal;color:var(--muted);
+    font-size:.86rem;letter-spacing:.18em;text-transform:uppercase}
+
+  /* ---------- TIMELINE ---------- */
+  .tl{margin-top:56px;position:relative}
+  .tl::before{content:"";position:absolute;left:78px;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,var(--hot),var(--violet),var(--sky));opacity:.45}
+  @media(max-width:640px){.tl::before{left:8px}}
+  .row{display:grid;grid-template-columns:78px 1fr;gap:30px;padding:16px 0;align-items:start;position:relative}
+  @media(max-width:640px){.row{grid-template-columns:1fr;gap:5px;padding-left:34px}}
+  .row .time{
+    font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.02em;
+    text-align:right;padding-top:2px;color:var(--paper);
+  }
+  @media(max-width:640px){.row .time{text-align:left;color:var(--lime);font-size:1rem}}
+  .row .body{position:relative;padding-left:26px}
+  .row .body::before{
+    content:"";position:absolute;left:-7px;top:9px;width:14px;height:14px;border-radius:50%;
+    background:var(--ink);border:2.5px solid var(--hot);
+  }
+  @media(max-width:640px){.row .body{padding-left:0}.row .body::before{left:-33px;top:4px}}
+  .row:nth-child(even) .body::before{border-color:var(--sky)}
+  .row .body strong{font-family:var(--display);font-weight:600;font-size:1.1rem;display:block;margin-bottom:3px}
+  .row .body span{color:var(--muted);font-size:.95rem}
+
+  /* ---------- PHASES ---------- */
+  .phases{display:grid;gap:12px;margin-top:52px}
+  .phase{
+    display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;
+    border:1px solid var(--edge);border-radius:var(--r);padding:24px 28px;
+    background:rgba(255,255,255,.03);transition:background .3s,border-color .3s,transform .3s;
+  }
+  .phase:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.25);transform:scale(1.012)}
+  .phase .when{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.02em;color:var(--lime);min-width:135px}
+  .phase .what strong{font-family:var(--display);font-weight:600;font-size:1.2rem;display:block;margin-bottom:4px}
+  .phase .what span{color:var(--muted);font-size:.95rem}
+  .phase .idx{font-family:var(--display);font-weight:800;font-size:2.4rem;color:rgba(255,255,255,.10);letter-spacing:-.05em}
+  @media(max-width:760px){.phase{grid-template-columns:1fr;gap:9px;padding:22px}.phase .idx{display:none}.phase .when{min-width:0}}
+
+  /* ---------- PLACE ---------- */
+  .place{
+    border-radius:var(--r);overflow:hidden;border:1px solid var(--edge);
+    background:linear-gradient(150deg,rgba(139,92,255,.20),rgba(255,77,46,.12));
+    padding:clamp(32px,5vw,60px);margin-top:52px;
+  }
+  .place .pin{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,5vw,3.2rem);letter-spacing:-.04em;line-height:1;margin-bottom:16px}
+  .place .addr{color:#D6D1E0;font-size:1.05rem}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+  .chip{
+    border:1px solid var(--edge);border-radius:100px;padding:8px 16px;font-size:.85rem;
+    background:rgba(255,255,255,.06);color:#E6E2EE;
+  }
+
+  /* ---------- PRICE ---------- */
+  .price{
+    border-radius:var(--r);border:1px solid var(--edge);padding:clamp(30px,5vw,54px);
+    background:linear-gradient(155deg,rgba(200,255,61,.14),rgba(61,220,255,.06));
+    display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,60px);align-items:center;margin-top:52px;
+  }
+  @media(max-width:760px){.price{grid-template-columns:1fr;gap:24px}}
+  .price .fig{font-family:var(--display);font-weight:800;font-size:clamp(4.4rem,14vw,8rem);line-height:.82;letter-spacing:-.06em;color:var(--lime)}
+  .price ul{list-style:none;display:grid;gap:11px}
+  .price li{display:flex;gap:12px;align-items:flex-start;font-size:1rem;color:#E6E2EE}
+  .price li::before{content:"";width:19px;height:19px;border-radius:50%;background:var(--lime);flex:none;margin-top:2px;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/95% no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/95% no-repeat;}
+
+  /* ---------- FAQ ---------- */
+  .faq{margin-top:52px;display:grid;gap:10px}
+  details{border:1px solid var(--edge);border-radius:18px;background:rgba(255,255,255,.03);overflow:hidden;transition:background .3s}
+  details[open]{background:rgba(255,255,255,.06)}
+  summary{
+    list-style:none;cursor:pointer;padding:22px 26px;
+    font-family:var(--display);font-weight:600;font-size:1.08rem;letter-spacing:-.01em;
+    display:flex;justify-content:space-between;align-items:center;gap:18px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:1.6rem;color:var(--hot);transition:transform .3s;line-height:1;flex:none}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 26px 24px;color:#C9C4D4;max-width:70ch}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    text-align:center;border-radius:var(--r);
+    background:linear-gradient(140deg,var(--hot),var(--violet));
+    padding:clamp(46px,8vw,96px) clamp(24px,5vw,60px);position:relative;overflow:hidden;
+  }
+  .cta h2{margin-bottom:16px}
+  .cta p{max-width:48ch;margin:0 auto 32px;color:rgba(255,255,255,.9);font-size:1.1rem}
+  .cta .btn{background:var(--ink);color:var(--paper)}
+  .cta .btn:hover{box-shadow:0 16px 44px rgba(0,0,0,.4)}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--edge);padding:56px 0 40px;background:var(--ink-2)}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+  @media(max-width:760px){.fgrid{grid-template-columns:1fr;gap:26px}}
+  footer h4{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer p,footer a{color:#C9C4D4;font-size:.95rem;text-decoration:none;display:block;margin-bottom:6px}
+  footer a:hover{color:var(--lime)}
+  .fbot{margin-top:44px;padding-top:22px;border-top:1px solid var(--edge);color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .todo{color:var(--hot);font-weight:600}
+  .cta .todo{color:#0B0A0F;background:rgba(255,255,255,.82);padding:3px 10px;border-radius:8px}
+
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="brand"><span class="dot"></span> Scuola di Unità <span style="color:var(--muted);font-weight:400">’26</span></div>
+  <div class="navlinks">
+    <a href="#cose">Cos'è</a>
+    <a href="#unita">Vita di unità</a>
+    <a href="#giornata">La giornata</a>
+    <a href="#programma">Programma</a>
+    <a href="#casa">La casa</a>
+    <a href="#costi">Costi</a>
+  </div>
+  <a href="#iscriviti" class="btn btn-hot">Ci sto</a>
+</nav>
+
+<header>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="pulse"></span> 21ª edizione · dal 2005</span>
+    <h1>
+      <span class="line"><span>Scuola</span></span>
+      <span class="line"><span>di</span></span>
+      <span class="line"><span class="grad">Unità</span></span>
+    </h1>
+    <p class="hero-sub">17 giorni, una casa piena di gente, la tua scuola di sempre.<br><b>11 → 27 settembre 2026</b>, canonica di Belvedere Fogliense.</p>
+    <div class="hero-cta">
+      <a href="#iscriviti" class="btn btn-hot">Iscriviti ora →</a>
+      <a href="#cose" class="btn btn-ghost">Ma che roba è?</a>
+    </div>
+
+    <div class="count" id="count" aria-label="Countdown alla partenza">
+      <div class="cell"><div class="n" id="dd">—</div><div class="l">giorni</div></div>
+      <div class="cell"><div class="n" id="hh">—</div><div class="l">ore</div></div>
+      <div class="cell"><div class="n" id="mm">—</div><div class="l">minuti</div></div>
+      <div class="cell"><div class="n" id="ss">—</div><div class="l">secondi</div></div>
+    </div>
+
+    <div class="hero-meta">
+      <div><span class="k">Quando</span><span class="v">11 – 27 set 2026</span></div>
+      <div><span class="k">Dove</span><span class="v">Belvedere Fogliense</span></div>
+      <div><span class="k">Per chi</span><span class="v">2ª e 3ª superiore</span></div>
+      <div><span class="k">Quanto</span><span class="v">180 € tutto compreso</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>vivere insieme</span><span class="on">★</span><span>studiare sul serio</span><span class="on">★</span><span>cucinare</span><span class="on">★</span><span>litigare e rifare pace</span><span class="on">★</span><span>svegliarsi presto</span><span class="on">★</span><span>ridere tanto</span><span class="on">★</span><span>vita di unità</span><span class="on">★</span>
+    <span>vivere insieme</span><span class="on">★</span><span>studiare sul serio</span><span class="on">★</span><span>cucinare</span><span class="on">★</span><span>litigare e rifare pace</span><span class="on">★</span><span>svegliarsi presto</span><span class="on">★</span><span>ridere tanto</span><span class="on">★</span><span>vita di unità</span><span class="on">★</span>
+  </div>
+</div>
+
+<!-- COS'È -->
+<section id="cose">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="tag">01 — Cos'è</span>
+      <h2>Vai a scuola.<br>Solo che poi<br><span class="grad">non torni a casa.</span></h2>
+    </div>
+    <div class="reveal">
+      <p class="lead">La Scuola di Unità è un periodo di vita in comune: diciassette giorni, dall'11 al 27 settembre. La mattina prendi il bus e vai a scuola come sempre: stessa classe, stessi prof, stesse interrogazioni.</p>
+      <p class="lead">Il pomeriggio invece torni in una casa dove ci sono gli altri. Si studia insieme — davvero, con qualcuno più grande che ti dà una mano — si cucina, si puliscono i bagni (sì, anche quelli), e la sera si fa qualcosa insieme: incontri, giochi, film, preghiera, uscite.</p>
+      <p class="lead">Alla fine ti accorgi di due cose: che hai studiato meglio di quando eri da solo, e che stare con gli altri in un certo modo cambia come guardi tutto il resto.</p>
+
+      <div class="cards" style="margin-top:34px">
+        <div class="card"><span class="num">01</span><h3>Non è un ritiro spirituale</h3><p>È la tua vita normale — scuola, compiti, allenamento — vissuta in un posto diverso e con altre persone attorno.</p></div>
+        <div class="card"><span class="num">02</span><h3>Non è un collegio</h3><p>Nessuno ti sorveglia. Ci si organizza insieme, e funziona solo se ci si mette del proprio.</p></div>
+        <div class="card"><span class="num">03</span><h3>Non serve essere "bravi"</h3><p>Non c'è un livello minimo di fede, di voti o di simpatia. Serve solo la voglia di provarci sul serio.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMERI -->
+<section style="padding-top:0">
+  <div class="wrap reveal">
+    <div class="stats">
+      <div class="stat c1"><div class="big">17</div><div class="cap">giorni, dal weekend di apertura alla messa finale</div></div>
+      <div class="stat c2"><div class="big">2</div><div class="cap">settimane di scuola vissute da qui</div></div>
+      <div class="stat c3"><div class="big">180€</div><div class="cap">tutto compreso, dal letto ai trasferimenti</div></div>
+      <div class="stat c4"><div class="big">21ª</div><div class="cap">edizione: si va avanti dal 2005</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- VITA DI UNITÀ -->
+<section id="unita">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="tag">02 — Vita di unità</span>
+      <h2>Abitare insieme<br>è facile.<br><span class="grad">Volersi bene<br>è il lavoro.</span></h2>
+    </div>
+    <div class="reveal">
+      <p class="lead">Quello che tiene insieme la giornata non è l'orario appeso in cucina. È una cosa che si chiama <b>vita di unità</b>: provare a costruire rapporti veri con le persone che ti ritrovi attorno — anche con quella che ti sta antipatica, anche il giovedì sera quando sei a pezzi.</p>
+      <p class="lead">Non è un'idea astratta: sono gesti piccolissimi e verificabili. Lavare i piatti di qualcun altro. Dire una cosa scomoda invece di tenerla dentro. Ricominciare il giorno dopo, quando è andata male.</p>
+
+      <div class="cards" style="margin-top:34px">
+        <div class="card"><span class="num">01</span><h3>Quindici minuti di silenzio</h3><p>La meditazione del pomeriggio. Nessuno ti dice cosa pensare: è il momento in cui la giornata smette di correre e ti chiedi, da solo, come stai andando.</p></div>
+        <div class="card"><span class="num">02</span><h3>Una frase per volta</h3><p>Ogni settimana una parola del Vangelo da provare a vivere davvero, e la sera si racconta com'è andata. Chi non crede ci prova lo stesso: funziona come allenamento prima ancora che come preghiera.</p></div>
+        <div class="card"><span class="num">03</span><h3>Pregare, se vuoi</h3><p>Messa, momenti di preghiera insieme, il silenzio della sera. Nessuno segna le presenze. Ma quasi tutti, prima o poi, ci finiscono dentro per curiosità loro.</p></div>
+        <div class="card"><span class="num">04</span><h3>Lo specchio più onesto</h3><p>Diciassette giorni con altri ragazzi ti mostrano come tratti le persone quando sei stanco, in ritardo e senza voglia. È scomodo. Ed è esattamente il punto in cui si cresce.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="quote reveal">
+      <blockquote>“Che tutti siano una cosa sola.”</blockquote>
+      <cite>Giovanni 17, 21 — la frase da cui è nata questa scuola</cite>
+    </div>
+  </div>
+</section>
+
+<!-- GIORNATA -->
+<section id="giornata">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <span class="tag">03 — La giornata</span>
+      <h2>Una giornata,<br>dall'inizio alla fine</h2>
+      <p class="lead">Sembra tanta roba. Dopo tre giorni è semplicemente la tua giornata.</p>
+    </div>
+
+    <div class="tl reveal">
+      <div class="row"><div class="time">6:30</div><div class="body"><strong>Sveglia e colazione</strong><span>Tutti insieme, con un pensiero breve per iniziare. Sì, è presto. Ci si fa l'abitudine.</span></div></div>
+      <div class="row"><div class="time">7:00</div><div class="body"><strong>Si va a scuola</strong><span>Gli animatori più grandi ti accompagnano alle fermate del bus per Pesaro o Urbino.</span></div></div>
+      <div class="row"><div class="time">~13:00</div><div class="body"><strong>Si rientra a scaglioni</strong><span>Chi torna prima comincia già a studiare. Nessuno aspetta gli altri per aprire i libri.</span></div></div>
+      <div class="row"><div class="time">14:30</div><div class="body"><strong>Pranzo e pulizie</strong><span>Si mangia insieme, poi a squadre: sparecchiare, lavare, stanze, bagni, corridoi.</span></div></div>
+      <div class="row"><div class="time">15:45</div><div class="body"><strong>Meditazione</strong><span>15 minuti di silenzio, da soli. È il momento più corto della giornata ed è quello che la tiene insieme.</span></div></div>
+      <div class="row"><div class="time">16:00</div><div class="body"><strong>Studio e attività</strong><span>Aula studio collettiva o individuale. Chi ha sport, musica o altro viene accompagnato e riportato.</span></div></div>
+      <div class="row"><div class="time">19:30</div><div class="body"><strong>Cena</strong><span>Se torni tardi da un allenamento, la cena ti aspetta.</span></div></div>
+      <div class="row"><div class="time">21:00</div><div class="body"><strong>Momento insieme</strong><span>Ogni sera qualcosa di diverso: incontri, testimonianze, cineforum, giochi, uscite, preghiera.</span></div></div>
+      <div class="row"><div class="time">22:30</div><div class="body"><strong>Si chiude</strong><span>Alle 23:00 si dorme. Domani c'è scuola.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMMA -->
+<section id="programma">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <span class="tag">04 — Programma</span>
+      <h2>Come sono fatti<br>i diciassette giorni</h2>
+      <p class="lead">Un solo weekend a casa in tutto il periodo: sabato 19 dopo scuola si esce, domenica 20 alle 17 si rientra. Il resto del tempo si sta insieme.</p>
+    </div>
+
+    <div class="phases reveal">
+      <div class="phase">
+        <div class="when">Ven 11 set, h 15</div>
+        <div class="what"><strong>Si entra in casa</strong><span>Valigia, stanze, prima cena tutti insieme. Si comincia di venerdì pomeriggio, senza scuola di mezzo.</span></div>
+        <div class="idx">01</div>
+      </div>
+      <div class="phase">
+        <div class="when">Sab 12 → Dom 13 set</div>
+        <div class="what"><strong>Il weekend di partenza</strong><span>Due giorni interi per conoscersi e capire dove ci si sta infilando. Non è un extra: è la parte che fa funzionare tutto il resto.</span></div>
+        <div class="idx">02</div>
+      </div>
+      <div class="phase">
+        <div class="when">Lun 14 → Sab 19 set</div>
+        <div class="what"><strong>Prima settimana</strong><span>Comincia la scuola. Prima sveglia alle 6:30, primo bus, primo pomeriggio di studio. Sabato 19, finita scuola, si va a casa.</span></div>
+        <div class="idx">03</div>
+      </div>
+      <div class="phase">
+        <div class="when">Dom 20 set, h 17</div>
+        <div class="what"><strong>Si rientra</strong><span>L'unico weekend a casa di tutto il periodo. Domenica alle 17 si è di nuovo in casa, tutti.</span></div>
+        <div class="idx">04</div>
+      </div>
+      <div class="phase">
+        <div class="when">Lun 21 → Sab 26 set</div>
+        <div class="what"><strong>Seconda settimana</strong><span>Quella in cui il ritmo diventa tuo e smetti di contare i giorni. Questo weekend si resta.</span></div>
+        <div class="idx">05</div>
+      </div>
+      <div class="phase">
+        <div class="when">Dom 27 set</div>
+        <div class="what"><strong>La chiusura</strong><span>Messa e pranzo con le famiglie: si chiude insieme a chi ci ha aspettato.</span></div>
+        <div class="idx">06</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASA -->
+<section id="casa">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <span class="tag">05 — La casa</span>
+      <h2>Quest'anno si cambia<br><span class="grad">casa</span></h2>
+      <p class="lead">Dopo anni a Pozzo Alto, la Scuola di Unità 2026 si trasferisce nella canonica di Belvedere Fogliense.</p>
+    </div>
+
+    <div class="place reveal">
+      <div class="pin">Canonica di<br>Belvedere Fogliense</div>
+      <p class="addr">Belvedere Fogliense, Tavullia (PU) — <span class="todo">[indirizzo completo da inserire]</span></p>
+      <div class="chips">
+        <span class="chip">Camere condivise</span>
+        <span class="chip">Cucina e sala studio</span>
+        <span class="chip">Bus per Pesaro e Urbino</span>
+        <span class="chip">Trasferimenti alle fermate inclusi</span>
+        <span class="chip">Un posto fuori dal traffico</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COSTI -->
+<section id="costi">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <span class="tag">06 — Costi</span>
+      <h2>Quanto costa</h2>
+      <p class="lead">Un prezzo unico per tutto il periodo. Se per la tua famiglia è un problema, parlane con noi prima di rinunciare: si trova sempre una soluzione.</p>
+    </div>
+
+    <div class="price reveal">
+      <div class="fig">180<span style="font-size:.42em">€</span></div>
+      <ul>
+        <li>Pensione completa per tutti e diciassette i giorni</li>
+        <li>Alloggio nella canonica di Belvedere Fogliense</li>
+        <li>Trasferimenti da e per le fermate dell'autobus</li>
+        <li>Weekend di partenza, dall'11 al 13 settembre</li>
+        <li>Tutte le attività, le serate e la messa finale con le famiglie</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <span class="tag">07 — Domande</span>
+      <h2>Le cose che<br>chiedono tutti</h2>
+    </div>
+
+    <div class="faq reveal">
+      <details>
+        <summary>Chi può partecipare?</summary>
+        <p>Chi frequenta la seconda e la terza superiore — quindi i nati nel 2010 e nel 2011. Qualche eccezione per i 2012 si valuta caso per caso: scrivici e ne parliamo.</p>
+      </details>
+      <details>
+        <summary>E la scuola? Perdo lezioni?</summary>
+        <p>No, nemmeno una. Vai a scuola tutti i giorni come faresti da casa: cambia solo il posto da cui parti la mattina. Il pomeriggio è dedicato allo studio, con gli animatori a disposizione per aiutarti.</p>
+      </details>
+      <details>
+        <summary>Devo essere credente?</summary>
+        <p>No. Ci sono momenti di preghiera e incontri di fede, e nessuno ti obbliga a fingere niente. Molti sono arrivati con le idee confuse e sono usciti con le idee un po' meno confuse — o confuse in modo più interessante.</p>
+      </details>
+      <details>
+        <summary>Posso continuare lo sport o la musica?</summary>
+        <p>Sì. Le attività extra-scolastiche continuano: gli animatori si organizzano per accompagnarti e venirti a riprendere. Se torni tardi, la cena ti aspetta.</p>
+      </details>
+      <details>
+        <summary>Non conosco quasi nessuno.</summary>
+        <p>Vale per la metà di chi si iscrive ogni anno. Il primo weekend serve esattamente a questo: dopo una settimana la domanda non te la fai più.</p>
+      </details>
+      <details>
+        <summary>Chi c'è in casa con noi?</summary>
+        <p>Gli animatori più grandi, che restano tutto il periodo, un sacerdote e gli adulti responsabili. Non sei mai da solo e non sei mai controllato a vista: è una via di mezzo che funziona.</p>
+      </details>
+      <details>
+        <summary>Posso venire solo per una settimana?</summary>
+        <p>Il percorso è pensato come un'esperienza unica dall'inizio alla fine, weekend di partenza compreso. Se hai un impegno che non si sposta, scrivici prima di iscriverti e vediamo insieme.</p>
+      </details>
+      <details>
+        <summary>Cosa devo portare?</summary>
+        <p><span class="todo">[Da completare: elenco del corredo — lenzuola, asciugamani, libri, abbigliamento, eventuale quota trasporto scolastico.]</span></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="iscriviti">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2>Ci stai?</h2>
+      <p>I posti sono quelli che la casa può tenere. Iscriviti presto: quando è piena, è piena.</p>
+      <a href="#" class="btn" id="formlink">Compila il modulo →</a>
+      <p style="margin-top:22px;font-size:.9rem;opacity:.8"><span class="todo">[Inserire qui il link al modulo di iscrizione]</span></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand" style="margin-bottom:14px"><span class="dot"></span> Scuola di Unità 2026</div>
+        <p style="max-width:38ch">21ª edizione. Diciassette giorni di vita insieme per chi fa la seconda e la terza superiore, nella canonica di Belvedere Fogliense.</p>
+      </div>
+      <div>
+        <h4>Info</h4>
+        <a href="#cose">Cos'è</a>
+        <a href="#unita">Vita di unità</a>
+        <a href="#giornata">La giornata tipo</a>
+        <a href="#programma">Programma</a>
+        <a href="#costi">Costi</a>
+      </div>
+      <div>
+        <h4>Scrivici</h4>
+        <p>Marco — <span class="todo">[telefono]</span></p>
+        <p>Elena — <span class="todo">[telefono]</span></p>
+        <p>don Giorgio — <span class="todo">[telefono]</span></p>
+        <p><span class="todo">[email]</span></p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>11 – 27 settembre 2026 · Belvedere Fogliense (PU)</span>
+      <span>Dal 2005.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Nav
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('stuck', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Reveal
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    }, {threshold:.12, rootMargin:'0px 0px -60px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // Countdown → 11 settembre 2026, ore 15:00 (Europe/Rome, CEST = UTC+2)
+  var target = new Date('2026-09-11T15:00:00+02:00').getTime();
+  var dd=document.getElementById('dd'), hh=document.getElementById('hh'),
+      mm=document.getElementById('mm'), ss=document.getElementById('ss');
+  function pad(n){ return n<10 ? '0'+n : ''+n; }
+  function tick(){
+    var d = target - Date.now();
+    if (d <= 0){
+      document.getElementById('count').innerHTML =
+        '<div class="cell" style="min-width:auto;padding:16px 26px"><div class="n" style="color:var(--lime)">Si parte!</div></div>';
+      return;
+    }
+    var s = Math.floor(d/1000);
+    dd.textContent = Math.floor(s/86400);
+    hh.textContent = pad(Math.floor(s%86400/3600));
+    mm.textContent = pad(Math.floor(s%3600/60));
+    ss.textContent = pad(s%60);
+    requestAnimationFrame(function(){ setTimeout(tick, 1000); });
+  }
+  tick();
+})();
+</script>
+</body>
+</html>
