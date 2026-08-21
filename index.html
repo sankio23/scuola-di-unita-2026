@@ -151,7 +151,8 @@
   }
 
   /* ---------- SECTIONS ---------- */
-  section{padding:clamp(72px,11vw,140px) 0;position:relative}
+  section{padding:clamp(56px,7.5vw,104px) 0;position:relative;scroll-margin-top:78px}
+  #iscriviti{scroll-margin-top:104px}
   .tag{
     font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--hot);
     font-weight:600;margin-bottom:18px;display:block;
@@ -169,7 +170,7 @@
   .reveal.in{opacity:1;transform:none}
 
   /* ---------- STATS ---------- */
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:56px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:40px}
   .stat{
     border:1px solid var(--edge);border-radius:var(--r);padding:28px 24px;
     background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
@@ -182,6 +183,7 @@
 
   /* ---------- SPLIT ---------- */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+  @media(min-width:901px){.split > div:first-child{position:sticky;top:104px}}
   @media(max-width:900px){.split{grid-template-columns:1fr}}
   .cards{display:grid;gap:14px}
   .card{
@@ -198,19 +200,19 @@
 
   /* ---------- QUOTE ---------- */
   .quote{
-    border-radius:var(--r);border:1px solid var(--edge);margin-top:52px;
-    padding:clamp(34px,5vw,58px);
+    border-radius:var(--r);border:1px solid var(--edge);margin-top:38px;
+    padding:clamp(26px,3vw,36px);
     background:linear-gradient(150deg,rgba(139,92,255,.18),rgba(61,220,255,.07));
   }
   .quote blockquote{
-    font-family:var(--display);font-weight:800;letter-spacing:-.035em;line-height:1.02;
-    font-size:clamp(1.9rem,5.2vw,3.4rem);text-transform:uppercase;
+    font-family:var(--display);font-weight:800;letter-spacing:-.035em;line-height:1.04;
+    font-size:clamp(1.5rem,3.2vw,2.15rem);text-transform:uppercase;
   }
-  .quote cite{display:block;margin-top:18px;font-style:normal;color:var(--muted);
-    font-size:.86rem;letter-spacing:.18em;text-transform:uppercase}
+  .quote cite{display:block;margin-top:14px;font-style:normal;color:var(--muted);
+    font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.5}
 
   /* ---------- TIMELINE ---------- */
-  .tl{margin-top:56px;position:relative}
+  .tl{margin-top:40px;position:relative}
   .tl::before{content:"";position:absolute;left:78px;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,var(--hot),var(--violet),var(--sky));opacity:.45}
   @media(max-width:640px){.tl::before{left:8px}}
   .row{display:grid;grid-template-columns:78px 1fr;gap:30px;padding:16px 0;align-items:start;position:relative}
@@ -231,7 +233,7 @@
   .row .body span{color:var(--muted);font-size:.95rem}
 
   /* ---------- PHASES ---------- */
-  .phases{display:grid;gap:12px;margin-top:52px}
+  .phases{display:grid;gap:12px;margin-top:40px}
   .phase{
     display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;
     border:1px solid var(--edge);border-radius:var(--r);padding:24px 28px;
@@ -248,7 +250,7 @@
   .place{
     border-radius:var(--r);overflow:hidden;border:1px solid var(--edge);
     background:linear-gradient(150deg,rgba(139,92,255,.20),rgba(255,77,46,.12));
-    padding:clamp(32px,5vw,60px);margin-top:52px;
+    padding:clamp(32px,5vw,60px);margin-top:40px;
   }
   .place .pin{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,5vw,3.2rem);letter-spacing:-.04em;line-height:1;margin-bottom:16px}
   .place .addr{color:#D6D1E0;font-size:1.05rem}
@@ -262,7 +264,7 @@
   .price{
     border-radius:var(--r);border:1px solid var(--edge);padding:clamp(30px,5vw,54px);
     background:linear-gradient(155deg,rgba(200,255,61,.14),rgba(61,220,255,.06));
-    display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,60px);align-items:center;margin-top:52px;
+    display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,60px);align-items:center;margin-top:40px;
   }
   @media(max-width:760px){.price{grid-template-columns:1fr;gap:24px}}
   .price .fig{font-family:var(--display);font-weight:800;font-size:clamp(4.4rem,14vw,8rem);line-height:.82;letter-spacing:-.06em;color:var(--lime)}
@@ -273,7 +275,7 @@
     mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/95% no-repeat;}
 
   /* ---------- FAQ ---------- */
-  .faq{margin-top:52px;display:grid;gap:10px}
+  .faq{margin-top:40px;display:grid;gap:10px}
   details{border:1px solid var(--edge);border-radius:18px;background:rgba(255,255,255,.03);overflow:hidden;transition:background .3s}
   details[open]{background:rgba(255,255,255,.06)}
   summary{
@@ -290,10 +292,10 @@
   .cta{
     text-align:center;border-radius:var(--r);
     background:linear-gradient(140deg,var(--hot),var(--violet));
-    padding:clamp(46px,8vw,96px) clamp(24px,5vw,60px);position:relative;overflow:hidden;
+    padding:clamp(42px,6vw,68px) clamp(24px,5vw,60px);position:relative;overflow:hidden;
   }
-  .cta h2{margin-bottom:16px}
-  .cta p{max-width:48ch;margin:0 auto 32px;color:rgba(255,255,255,.9);font-size:1.1rem}
+  .cta h2{margin-bottom:14px}
+  .cta p{max-width:48ch;margin:0 auto 28px;color:rgba(255,255,255,.9);font-size:1.1rem}
   .cta .btn{background:var(--ink);color:var(--paper)}
   .cta .btn:hover{box-shadow:0 16px 44px rgba(0,0,0,.4)}
 
@@ -419,6 +421,11 @@
     <div class="reveal">
       <span class="tag">02 — Vita di unità</span>
       <h2>Abitare insieme<br>è facile.<br><span class="grad">Volersi bene<br>è il lavoro.</span></h2>
+
+      <div class="quote">
+        <blockquote>“Che tutti siano una cosa sola.”</blockquote>
+        <cite>Giovanni 17, 21 — la frase da cui è nata questa scuola</cite>
+      </div>
     </div>
     <div class="reveal">
       <p class="lead">Quello che tiene insieme la giornata non è l'orario appeso in cucina. È una cosa che si chiama <b>vita di unità</b>: provare a costruire rapporti veri con le persone che ti ritrovi attorno — anche con quella che ti sta antipatica, anche il giovedì sera quando sei a pezzi.</p>
@@ -433,12 +440,6 @@
     </div>
   </div>
 
-  <div class="wrap">
-    <div class="quote reveal">
-      <blockquote>“Che tutti siano una cosa sola.”</blockquote>
-      <cite>Giovanni 17, 21 — la frase da cui è nata questa scuola</cite>
-    </div>
-  </div>
 </section>
 
 <!-- GIORNATA -->
