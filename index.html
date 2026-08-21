@@ -133,6 +133,23 @@
   .marquee span.on{color:var(--lime)}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
+  /* ---------- NOTICE GENITORI ---------- */
+  .notice{
+    background:linear-gradient(100deg,rgba(200,255,61,.16),rgba(61,220,255,.08));
+    border-bottom:1px solid var(--edge);padding:22px 0;
+  }
+  .notice .ni{display:flex;flex-wrap:wrap;gap:16px 30px;align-items:center;justify-content:space-between}
+  .notice .nk{
+    font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);
+    font-weight:600;display:block;margin-bottom:4px;
+  }
+  .notice .nw{font-family:var(--display);font-weight:800;letter-spacing:-.025em;font-size:1.5rem;line-height:1.1}
+  .notice .nd{color:#D6D1E0;font-size:.98rem;margin-top:4px;display:block}
+  .notice .npill{
+    border:1.5px solid rgba(200,255,61,.55);border-radius:100px;padding:11px 22px;
+    font-family:var(--display);font-weight:800;font-size:.9rem;color:var(--lime);white-space:nowrap;
+  }
+
   /* ---------- SECTIONS ---------- */
   section{padding:clamp(72px,11vw,140px) 0;position:relative}
   .tag{
@@ -351,6 +368,17 @@
   </div>
 </div>
 
+<div class="notice">
+  <div class="wrap ni">
+    <div>
+      <span class="nk">Prima di tutto — per i genitori</span>
+      <span class="nw">Giovedì 27 agosto, ore 21</span>
+      <span class="nd">Incontro di presentazione nella parrocchia di Padiglione. Si spiega tutto: come funziona, chi c'è, quanto costa.</span>
+    </div>
+    <span class="npill">Vi aspettiamo</span>
+  </div>
+</div>
+
 <!-- COS'È -->
 <section id="cose">
   <div class="wrap split">
@@ -398,7 +426,7 @@
 
       <div class="cards" style="margin-top:34px">
         <div class="card"><span class="num">01</span><h3>Quindici minuti di silenzio</h3><p>La meditazione del pomeriggio. Nessuno ti dice cosa pensare: è il momento in cui la giornata smette di correre e ti chiedi, da solo, come stai andando.</p></div>
-        <div class="card"><span class="num">02</span><h3>Una frase per volta</h3><p>Ogni settimana una parola del Vangelo da provare a vivere davvero, e la sera si racconta com'è andata. Chi non crede ci prova lo stesso: funziona come allenamento prima ancora che come preghiera.</p></div>
+        <div class="card"><span class="num">02</span><h3>Una frase per volta</h3><p>Ogni settimana una parola del Vangelo da provare a vivere davvero, e la sera si racconta com'è andata.</p></div>
         <div class="card"><span class="num">03</span><h3>Pregare, se vuoi</h3><p>Messa, momenti di preghiera insieme, il silenzio della sera. Nessuno segna le presenze. Ma quasi tutti, prima o poi, ci finiscono dentro per curiosità loro.</p></div>
         <div class="card"><span class="num">04</span><h3>Lo specchio più onesto</h3><p>Diciassette giorni con altri ragazzi ti mostrano come tratti le persone quando sei stanco, in ritardo e senza voglia. È scomodo. Ed è esattamente il punto in cui si cresce.</p></div>
       </div>
@@ -446,6 +474,11 @@
     </div>
 
     <div class="phases reveal">
+      <div class="phase" style="border-color:rgba(200,255,61,.42);background:rgba(200,255,61,.07)">
+        <div class="when">Gio 27 ago, h 21</div>
+        <div class="what"><strong>Incontro per i genitori</strong><span>Nella parrocchia di Padiglione. Prima che parta tutto, una sera per raccontare l'esperienza alle famiglie e rispondere alle domande. Vengano i ragazzi, vengano i genitori: soprattutto i genitori.</span></div>
+        <div class="idx">00</div>
+      </div>
       <div class="phase">
         <div class="when">Ven 11 set, h 15</div>
         <div class="what"><strong>Si entra in casa</strong><span>Valigia, stanze, prima cena tutti insieme. Si comincia di venerdì pomeriggio, senza scuola di mezzo.</span></div>
@@ -491,7 +524,7 @@
 
     <div class="place reveal">
       <div class="pin">Canonica di<br>Belvedere Fogliense</div>
-      <p class="addr">Belvedere Fogliense, Tavullia (PU) — <span class="todo">[indirizzo completo da inserire]</span></p>
+      <p class="addr">Belvedere Fogliense — Tavullia (PU)</p>
       <div class="chips">
         <span class="chip">Camere condivise</span>
         <span class="chip">Cucina e sala studio</span>
@@ -563,8 +596,12 @@
         <p>Il percorso è pensato come un'esperienza unica dall'inizio alla fine, weekend di partenza compreso. Se hai un impegno che non si sposta, scrivici prima di iscriverti e vediamo insieme.</p>
       </details>
       <details>
+        <summary>I miei genitori vogliono capirci qualcosa.</summary>
+        <p>Giovedì <b>27 agosto alle 21</b> c'è l'incontro di presentazione nella parrocchia di Padiglione: si spiega come funziona la giornata, chi sta in casa con i ragazzi, come si gestiscono scuola e attività, e quanto costa. È il posto giusto per fare tutte le domande, comprese quelle scomode.</p>
+      </details>
+      <details>
         <summary>Cosa devo portare?</summary>
-        <p><span class="todo">[Da completare: elenco del corredo — lenzuola, asciugamani, libri, abbigliamento, eventuale quota trasporto scolastico.]</span></p>
+        <p>Roba per viverci: lenzuola, asciugamani, i vestiti che ti servono e il materiale scolastico. Nient'altro di speciale.</p>
       </details>
     </div>
   </div>
@@ -599,10 +636,8 @@
       </div>
       <div>
         <h4>Scrivici</h4>
-        <p>Marco — <span class="todo">[telefono]</span></p>
-        <p>Elena — <span class="todo">[telefono]</span></p>
-        <p>don Giorgio — <span class="todo">[telefono]</span></p>
-        <p><span class="todo">[email]</span></p>
+        <p>Elena — <a href="tel:+393338546827">333 854 6827</a></p>
+        <p style="margin-top:10px;color:var(--muted)">Per qualsiasi cosa: scrivi o chiama.<br>Anche solo per capire se fa per te.</p>
       </div>
     </div>
     <div class="fbot">
